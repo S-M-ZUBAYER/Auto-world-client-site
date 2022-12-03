@@ -6,7 +6,7 @@ const CarCard = ({ product }) => {
         <div className="max-w-lg p-4 shadow-xl rounded-xl bg-white text-black">
             <div className="flex justify-between items-center pb-4 text-left border-bottom">
                 <div className="">
-                    <small className="text-gray-400">{date},{time}</small>
+                    <small className="text-gray-400 text-sm">{time}, {date}</small>
                     <p className="text-base font-bold">
                         {modelName}
                     </p>
@@ -24,15 +24,15 @@ const CarCard = ({ product }) => {
 
                 </div>
                 <div className="">
-                    <div className="flex justify-between">
-                        <p>Mileage: {mileage}</p>
-                        <p>Location: {location}</p>
+                    <div className="flex justify-between my-2">
+                        <p className="text-sm text-gray-400">Mileage: <span className="font-semibold text-black">{mileage}</span></p>
+                        <p className="text-sm text-gray-400">Location: <span className="font-semibold text-black">{location}</span></p>
                     </div>
-                    <div className="flex justify-between">
-                        <p>Engine: {engine}</p>
-                        <p>Transmission: {transmission}</p>
+                    <div className="flex justify-between my-2">
+                        <p className="text-sm text-gray-400">Engine: <span className="font-semibold text-black">{engine}</span></p>
+                        <p className="text-sm text-gray-400">Transmission: <span className="font-semibold text-black">{transmission}</span></p>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between my-2">
                         <p>{price}</p>
                         <button className="bg-red-400 text-white text-sm px-3 py-1">
                             More details

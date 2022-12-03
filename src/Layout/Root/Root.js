@@ -61,7 +61,7 @@ const Root = () => {
                             </summary>
 
                             <p class="mt-4 leading-relaxed text-left text-gray-700">
-                                Basic Information Not Available
+                                Information Not Available
                             </p>
                         </details>
 
@@ -124,6 +124,20 @@ const Root = () => {
 
                             </div>
                             <input type="range" min="0" max="100" value="40" className="range range-success" />
+                            <div className="text-left">
+                                <div className="py-1 px-2 shadow-lg">
+                                    <input type="checkbox" className="checkbox checkbox-xs mr-2 w-3 h-3 rounded-sm" />
+                                    <small className="text-xs">Possible bargaining</small>
+                                </div>
+                                <div className="py-1 px-2 shadow-lg">
+                                    <input type="checkbox" className="checkbox checkbox-xs mr-2 w-3 h-3 rounded-sm" />
+                                    <small>Exchange for real estate</small>
+                                </div>
+                                <div className="py-1 px-2 shadow-lg">
+                                    <input type="checkbox" className="checkbox checkbox-xs mr-2 w-3 h-3 rounded-sm" />
+                                    <small>Car exchange</small>
+                                </div>
+                            </div>
                         </details>
                         <details class="group border bg-gray-50 px-2 py-4">
                             <summary class="flex cursor-pointer items-center justify-between">
@@ -315,7 +329,23 @@ const Root = () => {
                                 No color combination Available
                             </p>
                         </details>
+                        <div className="text-start mx-3 mt-8">
+                            <p className="text-gray-400">
+                                Found Car: <span className="font-bold text-black">12334</span>
+                            </p>
+                            <div className="flex justify-between items-center mt-3 mb-12">
+                                <button className="bg-red-300 text-center py-1 px-14 text-xs text-white font-semibold">
+                                    Show
+                                </button>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 bg-red-200 p-1">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                            </div>
+
+                        </div>
                     </div>
+
 
 
                 </div>
