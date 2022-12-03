@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CarCard from '../CarCard/CarCard';
 
 const Home = () => {
-    const arrs = [1, 1, 1, 1, 1, 1, 11]
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/products')
+            .then(res => res.json())
+            .then(data => {
+                setProducts(data);
+            })
+    }, []);
     return (
         <div className="bg-gray-100">
             <div className="grid md:gap-4 mx-2 md:mx-8 my-2 md:my-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    arrs.map(arr => <CarCard></CarCard>)
+                    products.map(product => <CarCard
+                        product={product}
+                    ></CarCard>)
 
                 }
             </div>

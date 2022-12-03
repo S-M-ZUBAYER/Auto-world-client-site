@@ -1,13 +1,14 @@
 import React from 'react';
 
-const CarCard = () => {
+const CarCard = ({ product }) => {
+    const { modelName, image, mileage, location, engine, transmission, price, time, date, } = product;
     return (
         <div className="max-w-lg p-4 shadow-xl rounded-xl bg-white text-black">
             <div className="flex justify-between items-center pb-4 text-left border-bottom">
                 <div className="">
-                    <small className="text-gray-400">yesterday, 12:45</small>
+                    <small className="text-gray-400">{date},{time}</small>
                     <p className="text-base font-bold">
-                        {/* Flord Explore (2012) */}
+                        {modelName}
                     </p>
                 </div>
                 <div className="text-red-400 bg-red-200 p-1 rounded-md">
@@ -19,20 +20,20 @@ const CarCard = () => {
             </div>
             <div className="space-y-4">
                 <div className="space-y-2">
-                    <img src="https://source.unsplash.com/random/480x360/?4" alt="" className="block object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+                    <img src={image} alt="" className="block object-cover object-center w-full rounded-md h-72 bg-gray-500" />
 
                 </div>
                 <div className="">
                     <div className="flex justify-between">
-                        <p>Mileage: </p>
-                        <p>Location: </p>
+                        <p>Mileage: {mileage}</p>
+                        <p>Location: {location}</p>
                     </div>
                     <div className="flex justify-between">
-                        <p>Engine: </p>
-                        <p>Transmission: </p>
+                        <p>Engine: {engine}</p>
+                        <p>Transmission: {transmission}</p>
                     </div>
                     <div className="flex justify-between">
-                        <p>17000$</p>
+                        <p>{price}</p>
                         <button className="bg-red-400 text-white text-sm px-3 py-1">
                             More details
                         </button>
